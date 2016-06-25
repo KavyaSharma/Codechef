@@ -1,0 +1,45 @@
+CodeChef submission 10081358 (C++ 4.9.2) plaintext list. Status: AC, problem LADDU, contest MAY16. By kavya7 (kavya7), 2016-05-14 14:22:01.
+#include <iostream>
+ 
+using namespace std;
+ 
+ 
+int main(void) {
+	string s1,s2;
+	int t,p,r,j,se,n;
+	cin>>t;
+	while(t--)
+	{ cin>>n;
+	  cin>>s2;
+	  p=0;
+	 for(j=0;j<n;j++)
+	 {
+        cin>>s1;
+	     if(s1=="CONTEST_WON")
+	     { cin>>r;
+	      p=p+300;
+	     if(r<20)
+	      p=p+20-r;
+	     }
+	     else if(s1=="TOP_CONTRIBUTOR")
+	     { p=p+300;
+	     }
+	      else if(s1=="BUG_FOUND")
+	          {cin>>se;
+	            p=p+se;
+	          }
+	      else if(s1=="CONTEST_HOSTED") 
+	      { p=p+50;
+	      }
+	 }
+	  if(s2=="INDIAN")
+	  cout<<p/200<<endl;
+	  else
+	  cout<<p/400<<endl;
+	 
+	}
+	     
+	      
+	 
+	return 0;
+}
