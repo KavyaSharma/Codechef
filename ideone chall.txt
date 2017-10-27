@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	long long int a[100000],b,i,j,k,t,n,m,l,avg,h;
+	cin>>t;
+	while(t--)
+	{ cin>>n;
+	m=n;
+	k=n;
+	avg=0;
+	  while(n--)
+	  { cin>>a[n];
+	     if(a[n]<=2)
+	     {cout<<"No\n";
+	     break;
+	     }
+	   else
+	    {
+	   if(a[n]==5)
+	    { // l=n-1;
+	    	while(m>=n)
+	       {avg=(avg+a[m])/k;
+	       m--;}
+	       cin>>a[n-1];
+	       avg=(avg+a[n-1])/k;
+	       n--;
+	       if(avg>=4)
+	   cout<<"Yes\n";
+	       
+	       break;
+	  }
+	    
+	    else
+	    h=h+1;
+	  }
+	}
+	   if(h==n)
+	   cout<<"No\n";
+	}
+	     return 0;
+}
